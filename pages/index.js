@@ -12,7 +12,7 @@ const RelatedProductCrousel = dynamic(() =>
 import { fetchDataFromApi } from "@/utils/api";
 // import await from "await";
 
-export default function Home({ products }) {
+export default function Home() {
   return (
     <main>
       <HeroBanner />
@@ -32,8 +32,8 @@ export default function Home({ products }) {
         {/* main heading and pergraphe start */}
         {/* product card grid start*/}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-14 px-5 md:px-0">
-          {products?.data?.map((product) => (
-            <ProductCard key={product?.id} data={product} />
+          {[1, 2, 3, 4, 5, 6, 7, 8].map(() => (
+            <ProductCard />
           ))}
           {/* <ProductCard />
           <ProductCard />
@@ -57,12 +57,4 @@ export default function Home({ products }) {
       </Wrapper>
     </main>
   );
-}
-
-export async function getStaticProps() {
-  const products = await fetchDataFromApi("/api/products?populate=*");
-
-  return {
-    props: { products },
-  };
 }
