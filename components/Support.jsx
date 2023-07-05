@@ -8,7 +8,7 @@ import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined
 const Support = () => {
   return (
     <>
-      <div className="box flex items-center mb-10 px-3 ">
+      <div className="box flex items-center rounded px-3 py-5 border">
         <div className="icon-box flex justify-center items-center">
           <img src="/delivery.png" alt="delivery" width={150} />
         </div>
